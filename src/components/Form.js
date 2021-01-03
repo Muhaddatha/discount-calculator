@@ -1,6 +1,10 @@
 import React from "react";
 
+let elementId = 0;
+
 const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, setDiscountText}) => {
+
+    
 
     //updates the price prop when it changes in the form
     const priceHandler = (e) =>{
@@ -20,10 +24,12 @@ const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, s
         console.log("Form values -> priceText: " + priceText + " / dicountText:  " + discountText);
         
 
+        console.log("The id is: " + elementId);
         setSummaries([
-            ...summaries, {price: priceText, discount: discountText, finalPrice: priceText*(1-discountText/100)}
+            ...summaries, {price: priceText, discount: discountText, finalPrice: priceText*(1-discountText/100), id: elementId}
         ]);
 
+        elementId++;
         setPriceText("");
         setDiscountText("");
 
