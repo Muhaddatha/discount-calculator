@@ -4,11 +4,11 @@ const Form = () => {
     return(
 
         <form>
-            <label for="original-price-input">
+            <label htmlFor="original-price-input">
                 <input type="text" id="original-price-input"/>
             </label>
 
-            <label for="discount-rate-input">
+            <label htmlFor="discount-rate-input">
                 <input type="text" id="discount-rate-input"/>
             </label>
 
