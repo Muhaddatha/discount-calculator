@@ -18,6 +18,8 @@ function DiscountSummary(props){
                     Discount rate: {props.discountRate}%
                 </li>
             </ul>
+
+            <button type="button" className="btn-close" aria-label="close"></button>
             
         </div>
     )
