@@ -1,18 +1,52 @@
 import React from "react";
 
-const Form = () => {
+const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, setDiscountText}) => {
+
+    //updates the price prop when it changes in the form
+    const priceHandler = (e) =>{
+        setPriceText(e.target.value);
+    }
+
+    //updates the discount prop when it changes in the form
+    const discountHandler = (e) => {
+        setDiscountText(e.target.value);
+    }
+
+    //This function is called when the form is submitted
+    const formHandler = (e) => {
+        e.preventDefault();
+        console.log("Form submit button clicked");
+        
+        console.log("Form values -> priceText: " + priceText + " / dicountText:  " + discountText);
+        
+
+        setSummaries([
+            ...summaries, {price: priceText, discount: discountText, finalPrice: priceText*(1-discountText/100)}
+        ]);
+
+        setPriceText("");
+        setDiscountText("");
+
+    }
+
+    const areInputsNumeric = (price, discountRate) =>{
+        return true;
+    }
+
+
+
     return(
 
-        <form>
+        <form onSubmit={formHandler}>
             <label htmlFor="original-price-input">
-                <input type="text" id="original-price-input"/>
+                <input onChange={priceHandler} value={priceText} type="text" id="original-price-input"/>
             </label>
 
             <label htmlFor="discount-rate-input">
-                <input type="text" id="discount-rate-input"/>
+                <input onChange={discountHandler} value={discountText} type="text" id="discount-rate-input"/>
             </label>
 
-            <input type="submit" id="calculate-btn" value="Calculate"/>
+            <input type="submit" id="calculate-btn" value="Calculate" />
             
         </form>
 
@@ -20,4 +54,4 @@ const Form = () => {
 
 }
 
-export default Form
+export default Form;
