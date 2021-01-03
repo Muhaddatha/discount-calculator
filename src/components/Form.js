@@ -45,11 +45,11 @@ const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, s
 
         <form onSubmit={formHandler}>
             <label htmlFor="original-price-input">
-                <input onChange={priceHandler} value={priceText} type="text" id="original-price-input"/>
+                <input onChange={priceHandler} value={priceText} type="text" id="original-price-input" required/>
             </label>
 
             <label htmlFor="discount-rate-input">
-                <input onChange={discountHandler} value={discountText} type="text" id="discount-rate-input"/>
+                <input onChange={discountHandler} value={discountText} type="text" id="discount-rate-input" required/>
             </label>
 
             <input type="submit" id="calculate-btn" value="Calculate" />
