@@ -6,16 +6,15 @@ function DiscountSummary(props){
     return(
         <div className="summary-card">
             <p className="price-to-pay">
-                {/* put an icon here of money symbol */}
-                {(1 - props.discountRate) * props.originalPrice}
+               {props.finalPrice}
             </p>
 
             <ul>
                 <li>
-                    Original Price: {props.originalPrice}
+                    Original Price: {props.price}
                 </li>
                 <li>
-                    Discount rate: {props.discountRate}%
+                    Discount rate: {props.discount}%
                 </li>
             </ul>
 
