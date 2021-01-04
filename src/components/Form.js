@@ -74,10 +74,12 @@ const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, s
 
         <form onSubmit={formHandler}>
             <label htmlFor="original-price-input">
+                <i className="fas fa-dollar-sign"></i>
                 <input onChange={priceHandler} value={priceText} type="text" id="original-price-input" required/>
             </label>
 
             <label htmlFor="discount-rate-input">
+                <i className="fas fa-percentage"></i>
                 <input onChange={discountHandler} value={discountText} type="text" id="discount-rate-input" required/>
             </label>
 
