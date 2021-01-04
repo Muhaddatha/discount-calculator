@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <h1>Hi</h1> 
       <Form summaries={summaries} setSummaries={setSummaries} priceText={priceText} setPriceText={setPriceText} discountText={discountText} setDiscountText={setDiscountText}/>
-      <Summaries summaries={summaries} />
+      <Summaries summaries={summaries} setSummaries={setSummaries} />
     </div>
   );
 }
