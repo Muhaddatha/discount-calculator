@@ -22,20 +22,49 @@ const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, s
         console.log("Form submit button clicked");
         
         console.log("Form values -> priceText: " + priceText + " / dicountText:  " + discountText);
+
         
+        
+        if(areInputsNumeric()){
+            console.log("The id is: " + elementId);
+            setSummaries([
+                ...summaries, {price: priceText, discount: discountText, finalPrice: priceText*(1-discountText/100), id: elementId}
+            ]);
 
-        console.log("The id is: " + elementId);
-        setSummaries([
-            ...summaries, {price: priceText, discount: discountText, finalPrice: priceText*(1-discountText/100), id: elementId}
-        ]);
-
-        elementId++;
-        setPriceText("");
-        setDiscountText("");
+            elementId++;
+            setPriceText("");
+            setDiscountText("");
+        }
+        else{
+            console.log("Inputs are not valid.");
+        }
+        
 
     }
 
-    const areInputsNumeric = (price, discountRate) =>{
+    //validates form inputs
+    function areInputsNumeric(){
+
+        console.log("Checking if inputs are valid...");
+        
+        //pattern checks for float values
+        let pattern = /[+]?([0-9]*[.])?[0-9]+/;
+
+        discountText.replace('%', '');
+        priceText.replace('$', '');
+
+        if(!(priceText.match(pattern) && !isNaN(priceText) && priceText > 0)){
+            console.log("Price input is not valid.");
+            alert("Please enter a valid price without the dollar sign.");
+            return false;
+        }
+        else if(!(discountText.match(pattern) && !isNaN(discountText) && discountText <= 100 && discountText >= 0 )){
+            console.log("Discount rate is not valid.");
+            //alert
+            alert("Please enter a valid discount percentage between 0 and 100 without the percent(%) sign.");
+            return false;
+        }
+
         return true;
     }
 
