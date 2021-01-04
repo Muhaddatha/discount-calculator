@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import './normalize.css'
+import './normalize.css';
+import './bootstrap.min.css';
 import './App.css';
 import Form from "./components/Form";
 import Summaries from "./components/Summaries";
