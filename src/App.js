@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './normalize.css'
 import './App.css';
 import Form from "./components/Form";
 import Summaries from "./components/Summaries";
@@ -16,7 +17,7 @@ function App() {
       {/* form components manipulates the data that will be appended to the summaries
       container. */}
       <Form summaries={summaries} setSummaries={setSummaries} priceText={priceText} setPriceText={setPriceText} discountText={discountText} setDiscountText={setDiscountText}/>
-      
+
       {/* All calculation summaries are appended here. */}
       <Summaries summaries={summaries} setSummaries={setSummaries} />
     </div>
