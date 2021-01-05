@@ -26,7 +26,7 @@ const DiscountSummary = ({summary, setSummaries, summaries}) => {
                 Discount Rate: {summary.discount}%
             </p>
 
-            <button type="button" className="btn-close" aria-label="close" onClick={deleteHandler}></button>
+            <input type="button" className="btn-close" aria-label="close" onClick={deleteHandler} value="Delete"></input>
             
         </div>
     );
