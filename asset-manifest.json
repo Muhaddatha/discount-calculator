@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/discount-calculator.git/static/css/main.d23abab9.chunk.css",
+    "main.js": "/discount-calculator.git/static/js/main.bf5bd741.chunk.js",
+    "main.js.map": "/discount-calculator.git/static/js/main.bf5bd741.chunk.js.map",
+    "runtime-main.js": "/discount-calculator.git/static/js/runtime-main.ddf079ce.js",
+    "runtime-main.js.map": "/discount-calculator.git/static/js/runtime-main.ddf079ce.js.map",
+    "static/js/2.84f455a3.chunk.js": "/discount-calculator.git/static/js/2.84f455a3.chunk.js",
+    "static/js/2.84f455a3.chunk.js.map": "/discount-calculator.git/static/js/2.84f455a3.chunk.js.map",
+    "static/js/3.e54a6731.chunk.js": "/discount-calculator.git/static/js/3.e54a6731.chunk.js",
+    "static/js/3.e54a6731.chunk.js.map": "/discount-calculator.git/static/js/3.e54a6731.chunk.js.map",
+    "index.html": "/discount-calculator.git/index.html",
+    "static/css/main.d23abab9.chunk.css.map": "/discount-calculator.git/static/css/main.d23abab9.chunk.css.map",
+    "static/js/2.84f455a3.chunk.js.LICENSE.txt": "/discount-calculator.git/static/js/2.84f455a3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ddf079ce.js",
+    "static/js/2.84f455a3.chunk.js",
+    "static/css/main.d23abab9.chunk.css",
+    "static/js/main.bf5bd741.chunk.js"
+  ]
+}
