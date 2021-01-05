@@ -17,7 +17,7 @@ const DiscountSummary = ({summary, setSummaries, summaries}) => {
 
         <div className="summary-card">
             <p className="price-to-pay">
-               {summary.finalPrice}
+               Price after discount: ${summary.finalPrice}
             </p>
 
             <p>

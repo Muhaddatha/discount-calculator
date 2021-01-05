@@ -1,0 +1,193 @@
+:root{
+    --white: #f2f0f0;
+    --babyBlue: #7aa1bd;
+    --yellow: #f3b120;
+    --navy: #1a1a3c;
+    --brickRed: #ad4f40;
+}
+
+
+body{
+    min-height: 100vh; 
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background-repeat: no-repeat;
+    background-color: var(--babyBlue);
+    background-image: linear-gradient(var(--babyBlue) 15%, var(--white));
+    margin: 0;
+    padding: 0; 
+}
+
+
+header{
+    text-align: center;
+    padding: 3%;
+    padding-bottom: 1%;
+}
+
+
+header h1{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--navy);
+    text-shadow: 0 1.5px var(--yellow);
+}
+
+
+#root{
+    justify-content: center;
+    margin-top: 1%;
+}
+
+
+.App{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+form{
+    min-width: 50%;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: block;
+    text-align: center;
+}
+
+
+.input{
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+
+.input-header{
+    height: fit-content;
+    align-items: left;
+}
+
+
+.input label{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 1.1rem;
+    color: var(--navy);
+}
+
+
+i{
+    color: var(--navy);
+}
+
+
+.input input{
+    background: transparent;
+    border-radius: 3%;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    margin: auto;
+    border: 2px solid var(--navy);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    font-weight: bold;
+}
+
+
+::-webkit-input-placeholder { 
+    /* Chrome/Opera/Safari */
+    color: var(--white);
+    font-weight: normal;
+}
+
+
+::-moz-placeholder { 
+    /* Firefox 19+ */
+    color: var(--white);
+    font-weight: normal;
+}
+  
+
+::-ms-input-placeholder { 
+    /* IE 10+ */
+    color: var(--white);
+    font-weight: normal;
+}
+  
+
+::-moz-placeholder { 
+      /* Firefox 18- */
+    color: var(--white);
+    font-weight: normal; 
+}
+
+
+input[type="submit"]{
+    margin-top: 3%;
+    padding: 1.5%;
+    background-color: var(--yellow);
+    border-radius: 8%;
+    transition: 0.9s ease all;
+    border: none;
+}
+
+
+input[type="submit"]:hover, input[type="submit"]:focus{
+    background-color: var(--brickRed);
+    color: var(--white);
+}
+
+
+#summary-container{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#summary-container ul{
+    padding-left: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.summary-card{
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 60%;
+    padding: 2%;
+    border: dashed 2px #18232f;
+    display: block;
+}
+
+
+.price-to-pay{
+    font-weight: bold;
+}
+
+
+input[type="button"]{
+    padding: 1.5%;
+    border-radius: 8%;
+    background: var(--brickRed);
+    border-radius: 5%;
+    border: none;
+    transition: 0.9s ease all;
+    color: var(--white);
+}
+
+
+input[type="button"]:hover, input[type="button"]:focus{
+    background-color: var(--yellow);
+    color: var(--navy);
+}
