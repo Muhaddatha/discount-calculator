@@ -20,14 +20,11 @@ const DiscountSummary = ({summary, setSummaries, summaries}) => {
                {summary.finalPrice}
             </p>
 
-            <ul>
-                <li>
-                    Original Price: {summary.price}
-                </li>
-                <li>
-                    Discount rate: {summary.discount}%
-                </li>
-            </ul>
+            <p>
+                Original Price: ${summary.price}
+                <br></br>
+                Discount Rate: {summary.discount}%
+            </p>
 
             <button type="button" className="btn-close" aria-label="close" onClick={deleteHandler}></button>
             
