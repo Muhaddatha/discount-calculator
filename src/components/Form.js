@@ -26,9 +26,10 @@ const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, s
         
         
         if(areInputsNumeric()){
+            
             console.log("The id is: " + elementId);
             setSummaries([
-                ...summaries, {price: priceText, discount: discountText, finalPrice: priceText*(1-discountText/100), id: elementId}
+                ...summaries, {price: priceText, discount: discountText, finalPrice: (priceText*(1-discountText/100)).toFixed(2), id: elementId}
             ]);
 
             elementId++;
@@ -73,15 +74,28 @@ const Form = ({summaries, setSummaries, priceText, setPriceText, discountText, s
     return(
 
         <form onSubmit={formHandler}>
-            <label htmlFor="original-price-input">
-                <i className="fas fa-dollar-sign"></i>
-                <input onChange={priceHandler} value={priceText} type="text" id="original-price-input" required/>
-            </label>
 
-            <label htmlFor="discount-rate-input">
-                <i className="fas fa-percentage"></i>
-                <input onChange={discountHandler} value={discountText} type="text" id="discount-rate-input" required/>
-            </label>
+            <div className="input">
+                <div className="input-header">
+                    <i className="fas fa-dollar-sign"></i>
+                    <label htmlFor="original-price-input">Price</label>
+                </div>
+                
+                <input placeholder="Price..." onChange={priceHandler} value={priceText} type="text" id="original-price-input" required/>
+
+            </div>
+            
+            
+            <div className="input">
+                <div className="input-header">
+                    <i className="fas fa-percentage"></i>
+                    <label htmlFor="discount-rate-input">Discount rate</label>
+                </div>
+                
+                <input placeholder="Discount percentage..." onChange={discountHandler} value={discountText} type="text" id="discount-rate-input" required/>
+
+            </div>
+            
 
             <input type="submit" id="calculate-btn" value="Calculate" />
             
